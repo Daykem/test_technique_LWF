@@ -1,0 +1,8 @@
+# config/services.yaml
+
+services:
+    App\Security\JwtAuthenticator:
+        arguments:
+            $userProvider: '@security.user.provider.concrete.app_user_provider'
+            $tokenStorage: '@security.token_storage'
+            $passportFactory: '@security.passport_factory'
